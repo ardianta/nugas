@@ -2,7 +2,7 @@
 	import swal from 'sweetalert';
   import { page } from '$app/stores';
 	import { doc, getDoc, deleteDoc } from 'firebase/firestore';
-	import { db } from '../../../utils/firebase';
+	import { db } from '$lib/firebase';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 

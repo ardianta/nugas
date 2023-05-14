@@ -1,6 +1,6 @@
 <script>
   import { collection, addDoc } from "firebase/firestore";
-  import { db } from "../../../utils/firebase";
+  import { db } from "$lib/firebase";
   import { goto } from '$app/navigation';
 
   let isSubmitting = false;

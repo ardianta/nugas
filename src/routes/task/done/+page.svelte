@@ -1,8 +1,8 @@
 <script>
 	import { collection, query, where, getDocs } from 'firebase/firestore';
-	import { db } from '../../../utils/firebase';
-	import TodoItem from '../../../componetns/TodoItem.svelte';
-	import TodoItemSkeleton from '../../../componetns/TodoItemSkeleton.svelte';
+	import { db } from '$lib/firebase';
+	import TodoItem from '$lib/componetns/TodoItem.svelte';
+	import TodoItemSkeleton from '$lib/componetns/TodoItemSkeleton.svelte';
 	import { onMount } from 'svelte';
 
 	let tasks = [];
