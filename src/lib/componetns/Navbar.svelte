@@ -43,6 +43,6 @@
 
 <style>
   .active {
-    @apply bg-slate-100;
+    @apply bg-blue-600/10 text-blue-600;
   }
 </style>
