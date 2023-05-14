@@ -23,8 +23,8 @@
 
 <header class="flex justify-between items-center mb-16">
 	<div>
-		<h1 class="text-4xl font-bold mb-4">Arsip Tugas</h1>
-		<p class="text-slate-600">Tugas-tugas yang sudah gak aktif.</p>
+		<h1 class="text-4xl font-bold mb-4">Tugas Telat</h1>
+		<p class="text-slate-600">Tugas yang belum kamu selesaikan.</p>
 	</div>
 
 	<a
