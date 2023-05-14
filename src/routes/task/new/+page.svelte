@@ -8,7 +8,11 @@
   async function addTask(e){
     isSubmitting = true;
     const taskData = Object.fromEntries(new FormData(e.target));
-    const docRef = await addDoc(collection(db, "tugas"), taskData);
+    const docRef = await addDoc(collection(db, "tugas"), {
+      ...taskData,
+      isDone: false,
+      isArchived: false
+    });
     console.log("Document written with ID: ", docRef.id);
     isSubmitting = false;
     goto('/');
@@ -19,10 +23,6 @@
 	<h1 class="text-3xl font-bold mb-4">Buat Tugas baru</h1>
 
   <form method="post" class="flex flex-col gap-4" on:submit|preventDefault={addTask}>
-
-    <input type="hidden" name="isDone" value="false" />
-    <input type="hidden" name="isArchived" value="false" />
-
     <div class="flex flex-col gap-2">
       <label for="title" class="text-slate-600 text-sm">Judul Tugas</label>
       <input type="text" name="title" placeholder="Contoh: Tugas Pemrograman"
