@@ -33,6 +33,12 @@
 	}
 </script>
 
+<svelte:head>
+	{#if task}
+  <title>{task.title}</title>
+	{/if}
+</svelte:head>
+
 <header class="flex justify-between mb-4">
 	<div>
 		<button

@@ -9,7 +9,7 @@
 	let loadComplete = false;
 
 	onMount(async () => {
-		const q = query(collection(db, 'tugas'), where('isDone', '==', true));
+		const q = query(collection(db, 'tugas'), where('isArchived', '==', true));
 		const querySnapshot = await getDocs(q);
 		tasks = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 		loadComplete = true;
@@ -17,13 +17,13 @@
 </script>
 
 <svelte:head>
-  <title>Done</title>
+  <title>Arhived</title>
 </svelte:head>
 
 <header class="flex justify-between items-center mb-16">
 	<div>
-		<h1 class="text-4xl font-bold mb-4">Tugas Selesai</h1>
-		<p class="text-slate-600">Mantap, kamu hebat sudah meneylesaikan tugas-tugas ini.</p>
+		<h1 class="text-4xl font-bold mb-4">Arsip Tugas</h1>
+		<p class="text-slate-600">Tugas-tugas yang sudah gak aktif.</p>
 	</div>
 
 	<a

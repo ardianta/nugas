@@ -19,6 +19,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Buat Tugas Baru</title>
+</svelte:head>
+
 <div class="bg-white p-8 rounded-xl shadow">
 	<h1 class="text-3xl font-bold mb-4">Buat Tugas baru</h1>
 

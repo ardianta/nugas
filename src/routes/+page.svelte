@@ -15,6 +15,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>List Tugas</title>
+</svelte:head>
+
 <header class="flex justify-between items-center mb-16">
 	<div>
 		<h1 class="text-4xl font-bold mb-4">Daftar Tugas Kuliahmu</h1>
